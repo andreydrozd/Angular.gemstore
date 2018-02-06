@@ -9,6 +9,8 @@ import { GemModel } from '../../gemModel';
 })
 export class NavbarComponent implements OnInit {
 
+  @Input() cart: cartModel;
+
   links = [{
 		text: 'Home',
 		href: '/Home'

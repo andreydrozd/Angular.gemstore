@@ -14,8 +14,8 @@ export class GemComponent implements OnInit {
   @Input() cart: cartModel;
 
   addToCart(){
-    this.gem.inventory = this.gem.inventory - 1;
-    this.cart.totalQuantity = this.cart.totalQuantity + 1;
+    this.gem.inventory --;
+    this.cart.totalQuantity ++;
   }
 
   constructor() { }
