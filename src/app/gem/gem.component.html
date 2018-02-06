@@ -3,14 +3,9 @@
     <img src="{{gem.fullImagePath}}" alt="picture of gem">
     <div class="card-body">
       <h4 class="card-title">{{gem.name}}</h4>
-      <h6>ID: {{gem.id}}</h6>
       <p class="card-text">{{gem.price|currency}}</p>
-      <p class="card-text">{{gem.description}}</p>
-      <h6>Colors available</h6>
-      <ul>
-        <li *ngFor="let color of gem.colors">{{color}}</li>
-      </ul>
-      <p class="card-text">{{gem.inventory}}</p>      
+      <app-tabs [gem]="gem"></app-tabs>
+      <p class="card-text">Inventory: {{gem.inventory}}</p>      
     </div>
     <button *ngIf="gem.inventory > 0" class="btn btn-default" (click) = "gem.inventory = gem.inventory-1">Add to Cart</button>
     <button *ngIf="gem.inventory <= 0" disabled class="btn btn-danger">Sold Out</button> 

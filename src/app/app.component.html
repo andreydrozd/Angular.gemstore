@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
 <main class="container">
+  {{cart.totalQuantity}}  
   <div class="row">
-      <app-gem class="col-3" *ngFor="let g of gems" [gem]="g"></app-gem>     
+      <app-gem class="col-4" *ngFor="let g of gems" [gem]="g"></app-gem>     
   </div>
 </main>
 
