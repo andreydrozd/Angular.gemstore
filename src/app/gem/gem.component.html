@@ -1,8 +1,11 @@
-<!-- HW is to put this into Bootstrap cards -->
-
-<div>
-  {{gem.id}}
-  {{gem.name}}
-  {{gem.price|currency}}
-  {{gem.description}}
+<div class="card-container">
+  <div class="card">
+    <img src="{{gem.fullImagePath}}" alt="picture of gem">
+    <div class="card-body">
+      <h4 class="card-title">{{gem.name}}</h4>
+      <h5>ID: {{gem.id}}</h5>
+      <p class="card-text">{{gem.price|currency}}</p>
+      <p class="card-text">{{gem.description}}</p>					
+    </div>
+  </div>
 </div>
