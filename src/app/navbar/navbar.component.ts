@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { cartModel } from '../../cartModel';
+import { GemModel } from '../../gemModel';
 
 @Component({
   selector: 'app-navbar',
@@ -14,15 +16,12 @@ export class NavbarComponent implements OnInit {
   {
 		text: 'Account',
 		href: '/Account'
-  }, 
-  {
-		text: 'Cart',
-		href: '/Cart'
   }];
+
   
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {  
   }
 
 }

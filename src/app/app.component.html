@@ -1,37 +1,6 @@
 <app-navbar></app-navbar>
 <main class="container">
-  {{cart.totalQuantity}}  
   <div class="row">
       <app-gem class="col-4" *ngFor="let g of gems" [gem]="g"></app-gem>     
   </div>
 </main>
-
-
-<hr>
-
-<!-- Properties are defined in the app.component.ts file -->
-<p>
-  Welcome to {{ title }}
-</p>
-<p>
-  {{hotdog}}
-</p>
-
-<!-- Also possible to work with simple data types -->
-<p>
-  {{4+2}}
-</p>
-<p>
-  {{"I like ".concat("hamburgers")}}
-</p>
-  
-<!-- An example of expression filters. Done with the pipe character -->
-<p>
-  Welcome to {{title | uppercase}}
-</p>
-<p>
-  {{6|currency}}
-</p>
-<p>
-  {{now|date}}
-</p>

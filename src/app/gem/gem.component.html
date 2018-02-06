@@ -7,7 +7,7 @@
       <app-tabs [gem]="gem"></app-tabs>
       <p class="card-text">Inventory: {{gem.inventory}}</p>      
     </div>
-    <button *ngIf="gem.inventory > 0" class="btn btn-default" (click) = "gem.inventory = gem.inventory-1">Add to Cart</button>
+    <button *ngIf="gem.inventory > 0" class="btn btn-default" (click) = "addToCart()">Add to Cart</button>
     <button *ngIf="gem.inventory <= 0" disabled class="btn btn-danger">Sold Out</button> 
   </div> 
 </div>

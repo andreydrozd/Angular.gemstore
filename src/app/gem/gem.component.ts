@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GemModel } from "../../gemModel";
+import { cartModel } from '../../cartModel';
 
 
 @Component({
@@ -10,6 +11,12 @@ import { GemModel } from "../../gemModel";
 export class GemComponent implements OnInit {
   
   @Input() gem: GemModel;
+  @Input() cart: cartModel;
+
+  addToCart(){
+    this.gem.inventory = this.gem.inventory - 1;
+    this.cart.totalQuantity = this.cart.totalQuantity + 1;
+  }
 
   constructor() { }
 

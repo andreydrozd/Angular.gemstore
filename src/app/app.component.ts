@@ -12,10 +12,6 @@ import { cartItemModel } from '../cartItemModel';
 
 // This is where properties are defined.
 export class AppComponent {
-  title = 'Gem Store';
-  hotdog = "This is the hotdog property.";
-  now = Date.now().toString();
-
   cart: cartModel = {
     totalPrice: 0,
     totalQuantity: 0,
@@ -28,7 +24,7 @@ export class AppComponent {
     price: 2.95,
     description: "Some gems have hidden qualities beyond their lustre, behond their shine... Dodecahedron is one of those gems.",
     fullImagePath: "./assets/gem-images/gem-01.gif",
-    inventory: 0,
+    inventory: 5,
     colors: ["red", "blue", "green"]
   },
   {
@@ -37,7 +33,7 @@ export class AppComponent {
     price: 5.95,
     description: "The origin of the pentagonal gem is unknown, hence it\'s low value",
     fullImagePath: "./assets/gem-images/gem-02.gif",
-    inventory: 0,
+    inventory: 3,
     colors: ["orange", "yellow"]
   },
   {
