@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+// This is where properties are defined.
 export class AppComponent {
-  title = 'app';
+  title = 'Gem Store';
+  hotdog = "This is the hotdog property.";
+  now = Date.now().toString();
 }
