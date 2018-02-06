@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <main class="container">
   <div class="row">
-      <app-gem class="col-3"></app-gem>
+      <app-gem class="col-3" *ngFor="let g of gems" [gem]="g"></app-gem>     
   </div>
 </main>
 

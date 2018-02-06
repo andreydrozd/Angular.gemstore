@@ -4,4 +4,6 @@ export class GemModel {
 	price: number;
 	description: string;
 	fullImagePath : string;
+	inventory: number;
+	colors: string[];
 }
