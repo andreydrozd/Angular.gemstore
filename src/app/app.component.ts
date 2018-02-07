@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { GemModel } from '../gemmodel';
 import { cartModel } from '../cartModel';
 import { cartItemModel } from '../cartItemModel';
+import { ReviewModel } from '../reviewModel';
 
 
 @Component({
@@ -22,10 +23,24 @@ export class AppComponent {
     id: 1,
     name: "Dodecahedron",
     price: 2.95,
-    description: "Some gems have hidden qualities beyond their lustre, behond their shine... Dodecahedron is one of those gems.",
+    description: "Some gems have hidden qualities beyond their lustre, beyond their shine... Dodecahedron is one of those gems.",
     fullImagePath: "./assets/gem-images/gem-01.gif",
     inventory: 5,
-    colors: ["red", "blue", "green"]
+    colors: ["red", "blue", "green"],
+    reviews: [{
+      id: 1,
+      createDate: "Tuesday",
+      author: "andrey.m.drozd@gmail.com",
+      rating: 5,
+      body: "I luv dis."
+    },
+    {
+      id: 2,
+      createDate: "Tuesday",
+      author: "hater@gmail.com",
+      rating: 1,
+      body: "Dis suks"
+    }]
   },
   {
     id: 2,
@@ -34,7 +49,8 @@ export class AppComponent {
     description: "The origin of the pentagonal gem is unknown, hence it\'s low value",
     fullImagePath: "./assets/gem-images/gem-02.gif",
     inventory: 3,
-    colors: ["orange", "yellow"]
+    colors: ["orange", "yellow"],
+    reviews: []
   },
   {
     id: 3,
@@ -43,6 +59,7 @@ export class AppComponent {
     description: "The hexagonal gem is one of our best sellers",
     fullImagePath: "./assets/gem-images/gem-03.gif",
     inventory: 10,
-    colors: ["bling", "money"]    
+    colors: ["bling", "money"],    
+    reviews: []
   }]
 }
