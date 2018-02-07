@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GemComponent } from './gem/gem.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { TabsComponent } from './tabs/tabs.component';
     AppComponent,
     GemComponent,
     NavbarComponent,
-    TabsComponent
+    TabsComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule
