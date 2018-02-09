@@ -3,6 +3,7 @@ import { GemModel } from '../gemmodel';
 import { cartModel } from '../cartModel';
 import { cartItemModel } from '../cartItemModel';
 import { ReviewModel } from '../reviewModel';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Component({
@@ -13,8 +14,13 @@ import { ReviewModel } from '../reviewModel';
 
 export class AppComponent implements OnInit {
 
+  constructor(private httpClient: HttpClient){
+
+  }
+
   ngOnInit(){
     //TODO: pull data from an API here
+    this.httpClient.get<GemModel[]>("/assets/gems.json").subscribe(results => {this.gems = results});
   }
 
   cart:cartModel = {
@@ -24,5 +30,5 @@ export class AppComponent implements OnInit {
   }
 
   gems:GemModel[];
-  
+
 }

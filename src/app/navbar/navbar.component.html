@@ -7,11 +7,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let link of links">
-        <a class="nav-link" href="{{link.href}}">{{link.text}}</a>
+        <a class="nav-link" routerLink="{{link.href}}">{{link.text}}</a>
+      </li>  
+      <li>
+        <a class="nav-link" routerLink="/cart" data-trigger="hover" data-toggle="popover" data-html="true" title="Cart" data-placement="bottom">Cart<span class="badge badge-light">{{cart.totalQuantity}} @ {{cart.totalPrice | currency}}</span></a> 
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Cart">Cart<span class="badge badge-light">{{cart.totalQuantity}}</span></a>
-      </li>    
     </ul>
   </div>
 </nav>

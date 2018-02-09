@@ -9,6 +9,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AvatarService } from './avatar.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { CartComponent } from './cart/cart.component';
+import { AccountComponent } from './account/account.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -17,12 +21,16 @@ import { AvatarService } from './avatar.service';
     GemComponent,
     NavbarComponent,
     TabsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    CartComponent,
+    AccountComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [AvatarService],
   bootstrap: [AppComponent]
