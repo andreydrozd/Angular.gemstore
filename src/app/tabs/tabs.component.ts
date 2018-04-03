@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GemModel } from '../../gemModel';
+import { GemModel } from '../GemModel';
 
 @Component({
   selector: 'app-tabs',
@@ -8,10 +8,10 @@ import { GemModel } from '../../gemModel';
 })
 export class TabsComponent implements OnInit {
 
-  @Input() gem:GemModel;
+  @Input() gem: GemModel;
   tab: number;
 
-  setTab(selectedTab:number){
+  setTab(selectedTab: number) {
     this.tab = selectedTab;
   }
   constructor() { }

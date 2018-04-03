@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { cartModel } from '../../cartModel';
-import { GemModel } from '../../gemModel';
+import { CartModel } from '../CartModel';
+import { GemModel } from '../GemModel';
 
 @Component({
   selector: 'app-navbar',
@@ -9,21 +9,20 @@ import { GemModel } from '../../gemModel';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input() cart: cartModel;
+  @Input() cart: CartModel;
 
   links = [{
-		text: 'Home',
-		href: '/Home'
-  }, 
+    text: 'Home',
+    href: '/Home'
+  },
   {
-		text: 'Account',
-		href: '/Account'
+    text: 'Account',
+    href: '/Account'
   }];
 
-  
   constructor() { }
 
-  ngOnInit() {  
+  ngOnInit() {
   }
 
 }
