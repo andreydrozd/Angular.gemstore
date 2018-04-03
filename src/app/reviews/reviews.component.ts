@@ -16,7 +16,7 @@ export class ReviewsComponent implements OnInit {
 
   constructor(private avatarService: AvatarService) { }
 
-  submitClicked(){
+  submitClicked() {
     // TODO: This does not save reviews: I should figure out a way to send my new review to a "persistent data store" e.g. database.
     this.gem.reviews.push(this.newReview);
     this.ngOnInit();

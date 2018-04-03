@@ -1,17 +1,39 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Gemstore</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" routerLink="/">GemStore</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" *ngFor="let link of links">
         <a class="nav-link" routerLink="{{link.href}}">{{link.text}}</a>
-      </li>  
+      </li>
       <li>
-        <a class="nav-link" routerLink="/cart" data-trigger="hover" data-toggle="popover" data-html="true" title="Cart" data-placement="bottom">Cart<span class="badge badge-light">{{cart.totalQuantity}}</span></a> 
+        <a class="nav-link" routerLink="/cart" data-trigger="hover" data-toggle="popover" data-html="true" title="Cart" data-placement="bottom">Cart
+          <span class="badge badge-light">{{cart.totalQuantity}} @ {{cart.totalPrice | currency}}</span>
+        </a>
       </li>
     </ul>
   </div>
 </nav>
+<div style="display: none" class="cartBody">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of cart.items">
+        <td>{{i.name}}</td>
+        <td>{{i.quantity}}</td>
+        <td>{{i.unitPrice | currency}}</td>
+        <td>{{i.unitPrice * i.quantity | currency}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

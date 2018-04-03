@@ -16,6 +16,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { TabsComponent } from './tabs/tabs.component';
 
 import { AvatarService } from './avatar.service';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AvatarService } from './avatar.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [AvatarService],
+  providers: [AvatarService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

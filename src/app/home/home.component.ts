@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GemModel } from '../GemModel';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  gems: GemModel[];
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.httpClient.get<GemModel[]>('/assets/gems.json').subscribe(results => { this.gems = results; });
   }
-
 }

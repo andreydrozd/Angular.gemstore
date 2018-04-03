@@ -12,8 +12,8 @@
       <tr *ngFor="let i of cart.items">
         <td>{{i.name}}</td>
         <td>{{i.quantity}}</td>
-        <td>{{i.unitprice | currency}}</td>
-        <td>{{i.unitprice * i.quantity | currency}}</td>
+        <td>{{i.unitPrice | currency}}</td>
+        <td>{{i.unitPrice * i.quantity | currency}}</td>
       </tr>
     </tbody>
   </table>

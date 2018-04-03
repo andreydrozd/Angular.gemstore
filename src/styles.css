@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.popover{
+	max-width: 100%; /* Max Width of the popover (depending on the container!) */
+}
+
+.pointer{
+	cursor: pointer;
+}
