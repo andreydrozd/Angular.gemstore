@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { GemModel } from '../gemmodel';
-import { cartModel } from '../cartModel';
-import { cartItemModel } from '../cartItemModel';
-import { ReviewModel } from '../reviewModel';
+import { GemModel } from './GemModel';
+import { CartModel } from './CartModel';
+import { CartItemModel } from './CartItemModel';
+import { ReviewModel } from './ReviewModel';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
@@ -14,21 +14,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient){
-
-  }
-
-  ngOnInit(){
-    //TODO: pull data from an API here
-    this.httpClient.get<GemModel[]>("/assets/gems.json").subscribe(results => {this.gems = results});
-  }
-
-  cart:cartModel = {
+  cart: CartModel = {
     totalPrice: 0,
     totalQuantity: 0,
     items: []
+  };
+
+  gems: GemModel[];
+
+  constructor(private httpClient: HttpClient) {
   }
 
-  gems:GemModel[];
-
+  ngOnInit() {
+    this.httpClient.get<GemModel[]>('/assets/gems.json').subscribe(results => { this.gems = results; });
+  }
 }

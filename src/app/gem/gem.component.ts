@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GemModel } from "../../gemModel";
+import { GemModel } from '../../gemModel';
 import { cartModel } from '../../cartModel';
 import { cartItemModel } from '../../cartItemModel';
 

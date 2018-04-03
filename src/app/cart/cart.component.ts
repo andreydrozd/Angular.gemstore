@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cartModel } from '../../cartModel';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
-  constructor() { }
-
+  cart: cartModel;
+  constructor(private cartService: CartService) { }
   ngOnInit() {
+    this.cart = this.cartService.cart;
   }
 
 }
